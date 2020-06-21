@@ -14,14 +14,17 @@
 <div id="app">
     <v-app>
 
+<!--*******************************-->
 <!--    Left navigation drawer    -->
+<!--*******************************-->
+
         <v-navigation-drawer
                 v-if="isMobile"
                 v-model="drawer"
                 app
                 style="z-index: 10;"
                 :mobile-breakpoint="960"
-                color="#292933"
+                color="primary"
         >
 
             <v-img
@@ -112,7 +115,9 @@
             </v-list>
         </v-navigation-drawer>
 
+<!--*******************************-->
 <!--    Main    -->
+<!--*******************************-->
 
         <v-card class="overflow-hidden">
             <v-app-bar
@@ -173,6 +178,9 @@
             >
                 <v-container style="padding-top: 225px">
                     <v-tabs-items v-model="tabs">
+
+                        <!--*************** HOME ***************-->
+
                         <v-tab-item
                                 value="tab-home"
                         >
@@ -183,6 +191,8 @@
                             </v-card>
                         </v-tab-item>
 
+                        <!--*************** ABOUT ***************-->
+
                         <v-tab-item
                                 value="tab-about"
                         >
@@ -192,6 +202,8 @@
                                 </v-card-text>
                             </v-card>
                         </v-tab-item>
+
+                        <!--*************** WORK ***************-->
 
                         <v-tab-item
                                 value="tab-work"
@@ -211,6 +223,8 @@
                                 </v-card-text>
                             </v-card>
                         </v-tab-item>
+
+                        <!--*************** SERVICES ***************-->
 
                         <v-tab-item
                                 value="tab-services"
@@ -272,6 +286,8 @@
                             </v-card>
                         </v-tab-item>
 
+                        <!--*************** BLOG ***************-->
+
                         <v-tab-item
                                 value="tab-blog"
                         >
@@ -291,39 +307,93 @@
                             </v-card>
                         </v-tab-item>
 
+                        <!--*************** CONTACT ***************-->
+
                         <v-tab-item
                                 value="tab-contact"
                         >
                             <v-card flat :min-height="windowHeight+225">
+                                <v-card-title>CONTACT US</v-card-title>
                                 <v-card-text>
-                                    contact
+                                    <v-row>
+                                        <v-col cols="12" sm="6">
+                                            <v-text-field
+                                                label="Your Name"
+                                                outlined
+                                            ></v-text-field>
+
+                                            <v-text-field
+                                                label="Your Email"
+                                                outlined
+                                            ></v-text-field>
+
+                                            <v-textarea
+                                                    auto-grow
+                                                    label="Four rows"
+                                                    rows="4"
+                                                    row-height="30"
+                                                    outlined
+                                            ></v-textarea>
+
+                                            <v-row>
+                                                <v-spacer></v-spacer>
+
+                                                <v-btn class="secondary mr-3">send</v-btn>
+                                            </v-row>
+
+                                        </v-col>
+                                        <v-col cols="12" sm="6">
+                                            <v-row no-gutters>
+                                                <v-col cols="12">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint</p>
+                                                </v-col>
+                                                <v-col cols="12">
+                                                    <b>789 Pendergast St. <br>
+                                                        District Heights, MD 20747</b>
+                                                </v-col>
+                                                <v-col cols="12" class="mt-2">
+                                                    <b> T: (12) 123 123 <br>
+                                                        M: (04) 1233 1234 </b>
+                                                </v-col>
+                                                <v-col cols="12" class="mt-4">
+                                                    <v-icon large color="primary" class="mr-1">mdi-facebook</v-icon>
+                                                    <v-icon large color="primary" class="mr-1">mdi-linkedin</v-icon>
+                                                    <v-icon large color="primary" class="mr-1">mdi-twitter</v-icon>
+                                                    <v-icon large color="primary" class="mr-1">mdi-instagram</v-icon>
+                                                </v-col>
+                                            </v-row>
+                                        </v-col>
+                                    </v-row>
                                 </v-card-text>
                             </v-card>
                         </v-tab-item>
                     </v-tabs-items>
-
-
-                    <v-footer
-                            app
-                            class="white--text pt-4"
-                            color="#0f0f17"
-                    >
-                        <v-row no-gutters>
-                            <v-col cols="12" align="center">
-                                <span class="secondary-txt">&copy; Copyright Lorem ipsum dolor sit amet</span>
-                            </v-col>
-                            <v-col cols="12" align="center">
-                                <v-icon color="white" class="mr-1">mdi-facebook</v-icon>
-                                <v-icon color="white" class="mr-1">mdi-linkedin</v-icon>
-                                <v-icon color="white" class="mr-1">mdi-twitter</v-icon>
-                                <v-icon color="white" class="mr-1">mdi-instagram</v-icon>
-                            </v-col>
-                        </v-row>
-                    </v-footer>
-
                 </v-container>
             </v-sheet>
         </v-card>
+
+<!--*******************************-->
+<!--    Footer    -->
+<!--*******************************-->
+
+        <v-footer
+                app
+                class="white--text pt-4"
+                color="#0f0f17"
+        >
+            <v-row no-gutters>
+                <v-col cols="12" align="center">
+                    <span class="secondary--text">&copy; Copyright Lorem ipsum dolor sit amet</span>
+                </v-col>
+                <v-col cols="12" align="center">
+                    <v-icon color="white" class="mr-1">mdi-facebook</v-icon>
+                    <v-icon color="white" class="mr-1">mdi-linkedin</v-icon>
+                    <v-icon color="white" class="mr-1">mdi-twitter</v-icon>
+                    <v-icon color="white" class="mr-1">mdi-instagram</v-icon>
+                </v-col>
+            </v-row>
+        </v-footer>
+
     </v-app>
 </div>
 
@@ -333,7 +403,18 @@
 <script>
     new Vue({
         el: "#app",
-        vuetify: new Vuetify(),
+        vuetify: new Vuetify({
+            theme: {
+                themes: {
+                    light: {
+                        primary: '#292933',
+                        secondary: '#a99b6d',
+                        accent: '#8c9eff',
+                        error: '#b71c1c',
+                    },
+                },
+            },
+        }),
         data: () => ({
             model: null,
             drawer: false,
@@ -360,10 +441,7 @@
 
         watch: {
             isMobile(value) {
-                if(value){
-                    this.drawer = true;
-                }
-                else{
+                if(!value){
                     this.drawer = false;
                 }
             }
@@ -376,6 +454,7 @@
 
             goto(tab){
                 this.tabs = tab;
+                this.drawer = false;
             }
         }
     });
