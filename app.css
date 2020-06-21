@@ -5,3 +5,11 @@
 .secondary-txt {
     color: #a99b6d;
 }
+
+.top-padding-app-bar {
+    padding-top: 56px
+}
+
+.extra-top-padding-app-bar {
+    padding-top: 225px
+}
